@@ -20,10 +20,10 @@ def handle_message(message):
     print(message)
 
 
-@socket_io.on('test2')
+@socket_io.on('authenticate')
 def handle_message_test2(message):
     print(message)
-    emit('test2', {'hello': 'test connect'})
+    emit('authenticate', {'success': True})
 
 
 @socket_io.on('connect')
